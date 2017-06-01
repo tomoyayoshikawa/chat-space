@@ -52,10 +52,10 @@ unique:trueとし、さらにindexを貼る。
 
 - has_many :users :through :group_menbers
 - has_many :messages
-- has_many :group_menbers
+- has_many :menbers
 
 
-## group_menbers table
+## menbers table
 
 ユーザーとグループを紐づけるテーブル
 
