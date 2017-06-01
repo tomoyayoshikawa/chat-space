@@ -15,7 +15,7 @@
 
 - has_many :groups, :through :group_menbers
 - has_many :messages
-- has_many :group_menbers
+- has_many :menbers
 
 *グループ作成時のチャットメンバー追加において、名前から検索するため、
 unique:trueとし、さらにindexを貼る。
