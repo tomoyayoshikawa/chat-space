@@ -13,7 +13,7 @@
 
 ### Association
 
-- has_many :groups, :through => group_menbers
+- has_many :groups, :through :group_menbers
 - has_many :messages
 - has_many :group_menbers
 
@@ -50,7 +50,7 @@ unique:trueとし、さらにindexを貼る。
 
 ### Association
 
-- has_many :users :through => group_menbers
+- has_many :users :through :group_menbers
 - has_many :messages
 - has_many :group_menbers
 
