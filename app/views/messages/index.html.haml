@@ -1,0 +1,20 @@
+!!!
+.notification
+ = render partial: "/layouts/modules/notification"
+ 
+.sidebar
+ =render partial: "/layouts/modules/sidebar"
+
+.messages
+ .messages__group
+  .messages__group__left
+   %h2  exanple
+   %p   uuuuuu,eeeeeeee,sample,sample
+  .messages__group__right
+   %a.edit{href: ""} Edit
+
+ .messages__chat
+  = render partial: "/layouts/modules/chat"
+
+ .messages__writing
+  = render partial: "/layouts/modules/type"
