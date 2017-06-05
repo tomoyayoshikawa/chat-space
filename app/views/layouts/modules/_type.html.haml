@@ -1,0 +1,6 @@
+%form.messages__writing__form{:action => "/",:method => "get"}
+ %input.messages__writing__form__text{:name => "message",:placeholder => "type a message"}
+  %label.messages__writing__form__file
+   %input#icon{:type =>"file"}
+    %i.fa.fa-picture-o
+ %input.messages__writing__form__send{:type => "submit",:value => "Send"}
