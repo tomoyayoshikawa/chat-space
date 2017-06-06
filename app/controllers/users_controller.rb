@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update(user_params)
-    redirect_to controller: :messages, action: :index
+      redirect_to controller: :messages, action: :index
     end
   end
 
