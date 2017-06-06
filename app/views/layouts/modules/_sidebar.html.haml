@@ -1,12 +1,13 @@
 .head
  .group
-  %h3.group__name Sample
+  %h3.group__name 
+   = current_user.name
   %ul.group__icon
    %li.group__icon__edit
     %a{href: ""}
      %i.fa.fa-edit
    %li.group__icon__cog
-    %a{href: ""}
+    = link_to edit_user_path(current_user) do
      %i.fa.fa-cog
 .body
  %ul.lists
