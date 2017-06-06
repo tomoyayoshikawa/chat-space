@@ -1,10 +1,15 @@
 .notification{
-    background-color: $light-blue;
-    text-align: center;
-    color:white;
-    width:100vw;
-}
+  text-align: center;
+  color: $font-white;
 
+  #flash__alert{
+    background-color: #FF0000;
+  }
+  
+  #flash__notice{
+    background-color: $light-blue;
+      }
+  }
 
 .sidebar{
   width:300px;
@@ -38,7 +43,7 @@
   }
 
   .body{
-    height: calc(100vh - 100px - 25px);
+    height: calc(100vh - 100px);
     background-color: $parple;
     color: $font-white;
     ul{
@@ -96,7 +101,7 @@
     }
   }
   &__chat{
-    height: calc(100vh - 90px - 100px - 25px);
+    height: calc(100vh - 90px - 100px);
     background-color: $grey;
     box-sizing: border-box;
     padding: 46px 40px 0;
