@@ -1,8 +1,7 @@
 .notification{
   text-align: center;
   color: $font-white;
-  width: 100vw;
-  position: fixed;
+
   #flash__alert{
     background-color: red;
   }
@@ -10,7 +9,7 @@
     background-color: $light-blue;
       }
   }
-  
+
 .sidebar{
   width:300px;
   box-sizing:border-box;
