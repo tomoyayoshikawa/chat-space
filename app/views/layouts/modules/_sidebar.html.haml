@@ -4,7 +4,7 @@
    = current_user.name
   %ul.group__icon
    %li.group__icon__edit
-    %a{href: ""}
+    = link_to new_group_path do
      %i.fa.fa-edit
    %li.group__icon__cog
     = link_to edit_user_path(current_user) do
