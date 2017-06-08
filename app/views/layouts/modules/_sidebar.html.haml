@@ -10,9 +10,10 @@
     = link_to edit_user_path(current_user) do
      %i.fa.fa-cog
 .body
- %ul.lists
-  %li.name name
-  %li.say aaaaa
- %ul.lists
-  %li.name name2
-  %li.say iiiiiiiiiiii
+ - if current_user.groups
+  - current_user.groups.each do |group|
+   %ul.lists
+    %li.name
+     = group.name
+    %li.say ppppppppppp
+
