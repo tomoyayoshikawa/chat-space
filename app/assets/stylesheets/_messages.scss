@@ -1,15 +1,15 @@
 .notification{
   text-align: center;
-  color: $font-white;
+  color:white;
 
   #flash__alert{
     background-color: #FF0000;
   }
-  
   #flash__notice{
     background-color: $light-blue;
-      }
   }
+}
+
 
 .sidebar{
   width:300px;
@@ -17,7 +17,7 @@
   float:left;
   .head{
     height:100px;
-    background-color: $deep-parple;
+    background-color:$deep-parple;
     padding:0 20px;
     .group{
       line-height: 100px;
@@ -25,12 +25,12 @@
         font-size:16px;
         display: inline-block;
         font-weight: bold;
-        color: $font-white;
+        color:$font-white;
       }
       &__icon{
-        float: right;
+        float:right;
         a{
-          color: $font-white;
+          color:white;
         }
         &__edit{
           display: inline-block;
@@ -41,47 +41,57 @@
       }
     }
   }
-
   .body{
-    height: calc(100vh - 100px);
+
+    height:calc(100vh - 100px);
     background-color: $parple;
-    color: $font-white;
-    ul{
-      display: block;
-      padding: 20px 20px 20px 20px;
-      .name{
-        font-size: 15px;
-        padding-bottom: 5px;
-      }
-      .say{
-        font-size: 11px;
-      }
+    color:$font-white;
+    a{
+          text-decoration: none;
+          color:$font-white;
+          display:block;
+          }
+      a:hover {
+          filter:alpha(opacity=80);
+          opacity:0.8;
+       }
+        ul{
+          display:block;
+          padding:20px 20px 20px 20px;
+          .name{
+            font-size: 15px;
+            padding-bottom:5px;
+          }
+          .say{
+            font-size:11px;
+          }
+       }
     }
-  }
 }
 
 .messages{
-  width: calc(100% - 300px);
-  box-sizing: border-box;
+  width:calc(100% - 300px);
+  box-sizing:border-box;
   float:left;
   &__group{
     height:100px;
-    background-color: white;
+    background-color:white;
     padding:0 40px;
     box-sizing:border-box;
     border-bottom:solid 2px $line-color;
     &__left{
-      display: block;
-      float: left;
+      display:block;
+      float:left;
       h2{
-        font-size: 20px;
-        color: #333333;
-        padding-top: 35px;
+        font-size:20px;
+        color:$font-black;
+        padding-top:35px;
       }
       p{
         font-size:12px;
-        color: #dddddd;
+        color:$font-grey;
         padding-bottom:15px;
+        display:inline-block;
       }
     }
     &__right{
@@ -92,91 +102,98 @@
         display:block;
         border:solid 2px $light-blue;
         padding:0 20px;
-        height: 40px;
-        line-height: 40px;
+        height:40px;
+        line-height:40px;
         text-decoration: none;
-        font-weight: bold;
-        color: $light-blue;
+        font-weight:bold;
+        color:$light-blue;
       }
     }
   }
   &__chat{
-    height: calc(100vh - 90px - 100px);
-    background-color: $grey;
-    box-sizing: border-box;
-    padding: 46px 40px 0;
+    height:calc(100vh - 90px - 100px);
+    background-color:$grey;
+    box-sizing:border-box;
+    padding:46px 40px 0;
+    overflow: scroll;
+    width:100%;
     &__user{
-      display: inline-block;
-      padding-bottom: 10px;
+      display:inline-block;
+      padding-bottom:10px;
       &__name{
         display: inline-block;
-        font-size: 16px;
+        font-size:16px;
         font-weight: bold;
-        color: $message-color;
-        padding-right: 10px;
+        color:$message-color;
+        padding-right:10px;
       }
       &__time{
         display: inline-block;
-        font-size: 12px;
-        color: $grey;
+        font-size:12px;
+        color:$font-grey;
       }
     }
     p{
-      font-size: 14px;
-      color: $message-color;
-      padding-bottom: 20px;
+      font-size:14px;
+      color:$message-color;
+      padding-bottom:20px;
+      display:block;
     }
   }
 
   &__writing{
-    height: 90px;
-    box-sizing: border-box;
+    height:90px;
+    box-sizing:border-box;
     background-color: $light-grey;
-    padding: 0 40px;
+    padding:0 40px;
     &__form{
-      display: inline-block;
+      display:inline-block;
       &__text{
-        height: 50px;
-        margin: 20px 0;
-        width: calc(100vw - 300px - 240px);
-        padding: 0 10px;
-        font-size: 16px;
-        color: $message-color;
-        box-sizing: border-box;
-        display: inline-block;
-        border: none;
-        float: left;
-        outline: 0;
+        height:50px;
+        margin:20px 0;
+        width:calc(100vw - 300px - 240px);
+        padding:0 10px;
+        font-size:16px;
+        color:$message-color;
+        box-sizing:border-box;
+        display:inline-block;
+        border:none;
+        float:left;
+        outline:0;
       }
       &__file{
         display: inline-block;
-        width: 30px;
-        float: left;
+        width:30px;
+        float:left;
         line-height: 50px;
-        margin: 20px 0;
+        margin:20px 0;
         background-color: white;
-        height: 50px;
+        height:50px;
         padding-right: 10px;
-        box-sizing: border-box;
+        box-sizing:border-box;
       }
       #icon{
-        display: none;
+        display:none;
       }
       .fa{
         line-height: 50px;
-        padding-right: 10px;
+        padding-right:10px;
+        display: inline-block;
+        color:black;
+        cursor: pointer;
       }
       &__send{
-        display: inline-block;
-        width: 100px;
-        height: 50px;
-        padding: 0 20px;
-        margin: 20px 0 20px 15px;
+        display:inline-block;
+        width:100px;
+        height:50px;
+        padding:0 20px;
+        margin:20px 0 20px 15px;
         line-height: 50px;
         background-color: $light-blue;
-        color: $font-white;
-        box-sizing: border-box;
+        color:white;
+        box-sizing:border-box;
+        font-size:16px;
       }
-     }
-    }
-   }
+}
+  }
+}
