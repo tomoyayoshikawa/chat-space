@@ -17,14 +17,7 @@
      %li.name
       = group.name
      %li.say
-      - if group.messages.empty?
-       %br
-       ="まだメッセージはありません。"
-      - elsif group.messages.last.image.present?
-       %br
-       ="画像が投稿されました。"
-      - else
-       = group.messages.last.body
+      = show_last_message(group)
 
 
 
