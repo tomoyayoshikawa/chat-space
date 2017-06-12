@@ -11,7 +11,7 @@
     %p
      = user.name
   .messages__group__right
-   = link_to edit_group_path(@group), class: 'edit', method: :get do
+   = link_to edit_group_path(@group), class: 'edit' do
     Edit
  .messages__chat
   = render partial: "/layouts/modules/chat"

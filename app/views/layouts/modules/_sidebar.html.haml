@@ -12,7 +12,7 @@
 .body
  - if current_user.groups
   - current_user.groups.each do |group|
-   = link_to group_messages_path(group), method: :get do
+   = link_to group_messages_path(group) do
     %ul.lists
      %li.name
       = group.name
