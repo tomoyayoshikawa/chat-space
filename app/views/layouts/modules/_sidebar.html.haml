@@ -17,10 +17,14 @@
      %li.name
       = group.name
      %li.say
-      = group.messages.last.try(:body)
-      %br
-       = "画像が投稿されています" if group.messages.pluck(:image).last
-
+      - if group.messages.empty?
+       %br
+       ="まだメッセージはありません。"
+      - elsif group.messages.last.image.present?
+       %br
+       ="画像が投稿されました。"
+      - else
+       = group.messages.last.body
 
 
 
