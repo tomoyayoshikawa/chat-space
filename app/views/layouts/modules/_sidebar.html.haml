@@ -18,6 +18,8 @@
       = group.name
      %li.say
       = group.messages.last.try(:body)
+      %br
+       = "画像が投稿されています" if group.messages.pluck(:image).last
 
 
 
