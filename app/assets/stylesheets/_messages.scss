@@ -1,6 +1,6 @@
 .notification{
   text-align: center;
-  color:white;
+  color: $font-white;
 
   #flash__alert{
     background-color: #FF0000;
@@ -12,25 +12,25 @@
 
 
 .sidebar{
-  width:300px;
-  box-sizing:border-box;
-  float:left;
-  .head{
-    height:100px;
-    background-color:$deep-parple;
-    padding:0 20px;
-    .group{
+  width: 300px;
+  box-sizing: border-box;
+  float: left;
+  .head {
+    height: 100px;
+    background-color: $deep-parple;
+    padding: 0 20px;
+    .group {
       line-height: 100px;
-      &__name{
-        font-size:16px;
+      &__name {
+        font-size: 16px;
         display: inline-block;
         font-weight: bold;
-        color:$font-white;
+        color: $font-white;
       }
-      &__icon{
-        float:right;
+      &__icon {
+        float: right;
         a{
-          color:white;
+          color: $font-white;
         }
         &__edit{
           display: inline-block;
@@ -43,156 +43,156 @@
   }
   .body{
 
-    height:calc(100vh - 100px);
+    height: calc(100vh - 100px);
     background-color: $parple;
-    color:$font-white;
+    color: $font-white;
     a{
           text-decoration: none;
-          color:$font-white;
-          display:block;
+          color: $font-white;
+          display: block;
           }
       a:hover {
-          filter:alpha(opacity=80);
-          opacity:0.8;
+          filter: alpha(opacity=80);
+          opacity: 0.8;
        }
         ul{
-          display:block;
-          padding:20px 20px 20px 20px;
+          display: block;
+          padding: 20px 20px 20px 20px;
           .name{
             font-size: 15px;
-            padding-bottom:5px;
+            padding-bottom: 5px;
           }
           .say{
-            font-size:11px;
+            font-size: 11px;
           }
        }
     }
 }
 
 .messages{
-  width:calc(100% - 300px);
-  box-sizing:border-box;
-  float:left;
-  &__group{
-    height:100px;
-    background-color:white;
-    padding:0 40px;
-    box-sizing:border-box;
-    border-bottom:solid 2px $line-color;
-    &__left{
-      display:block;
-      float:left;
+  width: calc(100% - 300px);
+  box-sizing: border-box;
+  float: left;
+  &__group {
+    height: 100px;
+    background-color: white;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: solid 2px $line-color;
+    &__left {
+      display: block;
+      float: left;
       h2{
-        font-size:20px;
-        color:$font-black;
-        padding-top:35px;
+        font-size: 20px;
+        color: $font-black;
+        padding-top: 35px;
       }
       p{
-        font-size:12px;
-        color:$font-grey;
-        padding-bottom:15px;
-        display:inline-block;
+        font-size: 12px;
+        color: $font-grey;
+        padding-bottom: 15px;
+        display: inline-block;
       }
     }
-    &__right{
-      float:right;
-      padding-top:28px;
-      box-sizing:border-box;
+    &__right {
+      float: right;
+      padding-top: 28px;
+      box-sizing: border-box;
       .edit{
-        display:block;
-        border:solid 2px $light-blue;
-        padding:0 20px;
-        height:40px;
-        line-height:40px;
+        display: block;
+        border: solid 2px $light-blue;
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
         text-decoration: none;
-        font-weight:bold;
-        color:$light-blue;
+        font-weight: bold;
+        color: $light-blue;
       }
     }
   }
-  &__chat{
-    height:calc(100vh - 90px - 100px);
-    background-color:$grey;
-    box-sizing:border-box;
-    padding:46px 40px 0;
+  &__chat {
+    height: calc(100vh - 90px - 100px);
+    background-color: $grey;
+    box-sizing: border-box;
+    padding: 46px 40px 0;
     overflow: scroll;
-    width:100%;
-    &__user{
-      display:inline-block;
-      padding-bottom:10px;
-      &__name{
+    width: 100%;
+    &__user {
+      display: inline-block;
+      padding-bottom: 10px;
+      &__name {
         display: inline-block;
-        font-size:16px;
+        font-size: 16px;
         font-weight: bold;
-        color:$message-color;
-        padding-right:10px;
+        color: $message-color;
+        padding-right: 10px;
       }
-      &__time{
+      &__time {
         display: inline-block;
-        font-size:12px;
-        color:$font-grey;
+        font-size: 12px;
+        color: $font-grey;
       }
     }
     p{
-      font-size:14px;
-      color:$message-color;
-      padding-bottom:20px;
-      display:block;
+      font-size: 14px;
+      color: $message-color;
+      padding-bottom: 20px;
+      display: block;
     }
   }
 
-  &__writing{
-    height:90px;
-    box-sizing:border-box;
+  &__writing {
+    height: 90px;
+    box-sizing: border-box;
     background-color: $light-grey;
-    padding:0 40px;
-    &__form{
-      display:inline-block;
-      &__text{
-        height:50px;
-        margin:20px 0;
-        width:calc(100vw - 300px - 240px);
-        padding:0 10px;
-        font-size:16px;
-        color:$message-color;
-        box-sizing:border-box;
-        display:inline-block;
-        border:none;
-        float:left;
-        outline:0;
-      }
-      &__file{
+    padding: 0 40px;
+    &__form {
+      display: inline-block;
+      &__text {
+        height: 50px;
+        margin: 20px 0;
+        width: calc(100vw - 300px - 240px);
+        padding: 0 10px;
+        font-size: 16px;
+        color: $message-color;
+        box-sizing: border-box;
         display: inline-block;
-        width:30px;
-        float:left;
+        border: none;
+        float: left;
+        outline: 0;
+      }
+      &__file {
+        display: inline-block;
+        width: 30px;
+        float: left;
         line-height: 50px;
-        margin:20px 0;
+        margin: 20px 0;
         background-color: white;
-        height:50px;
+        height: 50px;
         padding-right: 10px;
-        box-sizing:border-box;
+        box-sizing: border-box;
       }
-      #icon{
-        display:none;
+      #icon {
+        display: none;
       }
-      .fa{
+      .fa {
         line-height: 50px;
-        padding-right:10px;
+        padding-right: 10px;
         display: inline-block;
-        color:black;
+        color: black;
         cursor: pointer;
       }
-      &__send{
-        display:inline-block;
-        width:100px;
-        height:50px;
-        padding:0 20px;
-        margin:20px 0 20px 15px;
+      &__send {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        padding: 0 20px;
+        margin: 20px 0 20px 15px;
         line-height: 50px;
         background-color: $light-blue;
-        color:white;
-        box-sizing:border-box;
-        font-size:16px;
+        color: white;
+        box-sizing: border-box;
+        font-size: 16px;
       }
 }
   }
