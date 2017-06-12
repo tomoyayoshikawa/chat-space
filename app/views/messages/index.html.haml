@@ -5,11 +5,14 @@
 .messages
  .messages__group
   .messages__group__left
-   %h2  exanple
-   %p   uuuuuu,eeeeeeee,sample,sample
+   %h2
+    = @group.name
+   - @group.users.each do |user|
+    %p
+     = user.name
   .messages__group__right
-   %a.edit{href: ""} Edit
-
+   = link_to edit_group_path(@group), class: 'edit' do
+    Edit
  .messages__chat
   = render partial: "/layouts/modules/chat"
 

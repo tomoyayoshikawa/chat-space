@@ -12,8 +12,13 @@
 .body
  - if current_user.groups
   - current_user.groups.each do |group|
-   %ul.lists
-    %li.name
-     = group.name
-    %li.say ppppppppppp
+   = link_to group_messages_path(group) do
+    %ul.lists
+     %li.name
+      = group.name
+     %li.say
+      = group.messages.last.try(:body)
+
+
+
 
