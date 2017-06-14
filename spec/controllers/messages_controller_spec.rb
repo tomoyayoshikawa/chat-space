@@ -41,7 +41,7 @@ describe MessagesController, type: :controller do
   end
 
   describe 'POST #create' do
-    context 'when user_signed_in & saves the message in the database' do
+    context 'when user_signed_in & saves the message in the database & could not save the massage in the dabase' do
       before  do
         login_user user
       end
@@ -50,19 +50,11 @@ describe MessagesController, type: :controller do
           expect{
            post :create, params: post_params
            }.to change(Message, :count).by(1)
-          # post :create, post_params params: { group_id: group.id, user_id: user.id, message: attributes_for(:message) }
-          # }.to change(Message, :count).by(1)
       end
 
       it 'redirects to messages#index' do
          post :create, params: post_params
          expect(response).to redirect_to group_messages_path(group.id)
-      end
-    end
-
-    context 'when user_signed_in & could not save the massage in the dabase' do
-      before  do
-        login_user user
       end
 
       it 'does not save the new message in the database' do
@@ -75,9 +67,8 @@ describe MessagesController, type: :controller do
           post :create, params: unpost_params
           expect(flash[:alert]).to include("メッセージを入力してください")
       end
-
     end
-
+    
     context 'when not user_signed_in' do
       it 'redirects to new_user_session_path' do
         post :create, params: post_params
@@ -86,3 +77,4 @@ describe MessagesController, type: :controller do
     end
   end
 end
+
