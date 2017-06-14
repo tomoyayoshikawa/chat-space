@@ -25,10 +25,10 @@ describe MessagesController, type: :controller do
         expect(response).to render_template :index
       end
 
-      it "assigns a new Message to @messages" do
+      it "assigns a new Message to @message" do
         messages = Message.new
         get_index
-        expect(assigns(:messages)).to be_a_new(Message)
+        expect(assigns(:message)).to be_a_new(Message)
       end
     end
 
@@ -68,7 +68,7 @@ describe MessagesController, type: :controller do
           expect(flash[:alert]).to include("メッセージを入力してください")
       end
     end
-    
+
     context 'when not user_signed_in' do
       it 'redirects to new_user_session_path' do
         post :create, params: post_params

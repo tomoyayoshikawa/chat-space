@@ -1,5 +1,5 @@
 .messages__writing__form
- = form_for [@group, @messages] do |f| 
+ = form_for [@group, @message] do |f| 
   = f.text_field :body, placeholder: "type a message", class: "messages__writing__form__text"
   = f.label :image, class: "messages__writing__form__file" do
    #icon
