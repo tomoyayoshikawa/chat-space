@@ -1,8 +1,8 @@
 .messages__writing__form
- = form_for [@group, @message] do |f| 
+ = form_for [@group, @message], html: { class: 'message_form' } do |f| 
   = f.text_field :body, placeholder: "type a message", class: "messages__writing__form__text"
   = f.label :image, class: "messages__writing__form__file" do
    #icon
     = f.file_field :image
    %i.fa.fa-picture-o
-  = f.button "Send", class: "messages__writing__form__send"
+  = f.submit "Send", class: "messages__writing__form__send"
