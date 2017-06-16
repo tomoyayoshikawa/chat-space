@@ -3,6 +3,6 @@
   = f.text_field :body, placeholder: "type a message", class: "messages__writing__form__text"
   = f.label :image, class: "messages__writing__form__file" do
    #icon
-    = f.file_field :image
+    = f.file_field :image, class: "messages__writing__form__image"
    %i.fa.fa-picture-o
   = f.submit "Send", class: "messages__writing__form__send"
