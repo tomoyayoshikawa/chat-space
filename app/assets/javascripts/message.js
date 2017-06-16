@@ -30,6 +30,13 @@ $(function() {
      .done(function(data) {
       console.log(data);
       buidHTML(data);
+      $('.message_form')[0].reset();
+
+      $('.messages__chat').animate({ scrollTop: $('.messages__chat')[0].scrollHeight }, 'slow');
     })
-   });
- });
+     .fail(function() {
+      alert('メッセージを送信できません');
+    });
+    return false;
+    });
+  });
