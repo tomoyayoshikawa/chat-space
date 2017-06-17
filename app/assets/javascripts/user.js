@@ -19,10 +19,11 @@ $(function(){
         dataType: 'json',
       })
       .done(function(data){
-        $('.user-search-result').find('li').remove(); 
+        var $form = $('.user-search-result')
+        $form.find('li').remove(); 
 
         $(data).each(function(i, user){
-          $('.user-search-result').append('<li>' + buildHTML(user) + '</li>')
+          $form.append('<li>' + buildHTML(user) + '</li>')
         });
       })
       .fail(function() {
