@@ -43,6 +43,10 @@ $(function(){
       var input_html = findUserHTML(user_id, user_name);
       $("#user-search-result").append(input_html);
       });
+
+    $(document).on("click", ".chat-group-user__btn--remove", function(){
+      $(this).parent().remove();
+    });
 });
 
 
