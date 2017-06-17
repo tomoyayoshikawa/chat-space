@@ -8,4 +8,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates :name, presence: true
   validates :email, presence: true
+  scope :find_user, -> (keyword){ where("name LIKE ?", "%#{keyword}%") }
+
 end

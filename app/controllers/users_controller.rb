@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.find_user(params[:keyword])
+    render json: @users
+  end
+
   def edit
     @user = User.find(params[:id])
   end
