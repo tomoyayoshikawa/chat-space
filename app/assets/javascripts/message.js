@@ -59,7 +59,7 @@ $(function() {
           }
         });
         $chatview.append(insertHTML);
-      })
+      });
       .fail(function(data){
         alert('自動更新に失敗しました')
       });
