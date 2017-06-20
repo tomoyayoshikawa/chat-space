@@ -1,11 +1,11 @@
 - @group.messages.each do |message|
- %ul_.messages__chat__user
-  %li.messages__chat__user__name 
+ %ul_.messages__chat__message{ "data-message-id": "#{message.id}"}
+  %li.messages__chat__message__name
    = message.user.name
-  %li.messages__chat__user__time 
+  %li.messages__chat__message__time
    = message.created_at.strftime("%Y-%m-%d %H:%M:%S")
- %p.message__chat__message__text
-  = message.body if message.body
- %p.message_chat__message__image
-  = image_tag(message.image) if message.image
+  %li.messages__chat__message__text
+   = message.body if message.body
+  %li.messages__chat__message__image
+   = image_tag(message.image) if message.image
 
